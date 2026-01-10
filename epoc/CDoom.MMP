@@ -1,0 +1,103 @@
+// *** EPOC MMP FILE
+
+// *** Definitions
+
+TARGET          cdoom.exe 
+TARGETTYPE      exe
+SOURCEPATH      ..
+EPOCHEAPSIZE    1000000 8000000
+EPOCSTACKSIZE   500000
+
+// *** defines
+
+//MACRO RANGECHECKING // For debug only?
+MACRO HAVE_DONE_WORKING_MALLOC_CHECK // For xmalloc.c
+MACRO HAVE_DONE_WORKING_REALLOC_CHECK // For xmalloc.c
+MACRO STDC_HEADERS // For xmalloc.c
+
+// *** Source files
+
+SOURCE am_map.c
+SOURCE d_items.c
+SOURCE d_main.c
+SOURCE d_net.c
+SOURCE doomdef.c
+SOURCE doomstat.c
+SOURCE dstrings.c
+SOURCE f_finale.c
+SOURCE f_wipe.c
+SOURCE g_game.c
+SOURCE hu_lib.c
+SOURCE hu_stuff.c
+SOURCE i_main.c
+SOURCE i_net.c
+SOURCE i_sound.c
+SOURCE i_system.c
+SOURCE i_video.c
+SOURCE info.c
+SOURCE m_argv.c
+SOURCE m_bbox.c
+SOURCE m_cheat.c
+SOURCE m_fixed.c
+SOURCE m_menu.c
+SOURCE m_misc.c
+SOURCE m_random.c
+SOURCE m_swap.c
+SOURCE p_ceilng.c
+SOURCE p_doors.c
+SOURCE p_enemy.c
+SOURCE p_floor.c
+SOURCE p_inter.c
+SOURCE p_lights.c
+SOURCE p_map.c
+SOURCE p_maputl.c
+SOURCE p_mobj.c
+SOURCE p_plats.c
+SOURCE p_pspr.c
+SOURCE p_saveg.c
+SOURCE p_setup.c
+SOURCE p_sight.c
+SOURCE p_spec.c
+SOURCE p_switch.c
+SOURCE p_telept.c
+SOURCE p_tick.c
+SOURCE p_user.c
+SOURCE r_bsp.c
+SOURCE r_data.c
+SOURCE r_draw.c
+SOURCE r_main.c
+SOURCE r_plane.c
+SOURCE r_segs.c
+SOURCE r_sky.c
+SOURCE r_things.c
+SOURCE s_sound.c
+SOURCE sounds.c
+SOURCE st_lib.c
+SOURCE st_stuff.c
+SOURCE tables.c
+SOURCE v_video.c
+SOURCE w_wad.c
+SOURCE wi_stuff.c
+SOURCE z_zone.c
+
+// *** EXTRA FILES
+
+SOURCE alloca.c
+SOURCE xmalloc.c
+
+
+// *** Include paths
+
+SYSTEMINCLUDE   \epoc32\include \epoc32\include\libc \sdl\include 
+USERINCLUDE     \sdl\include 
+
+// *** Libraries
+
+#ifndef WINS
+LIBRARY      egcc.lib 
+#endif
+
+   
+LIBRARY         euser.lib fbscli.lib estlib.lib ws32.LIB hal.lib gdi.lib  apgrfx.lib 
+STATICLIBRARY	sdl.lib sdlmain.lib 
+LIBRARY      ecrt0.lib // support for cmd line - Markus

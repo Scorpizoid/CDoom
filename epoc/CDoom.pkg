@@ -1,0 +1,24 @@
+;
+; CDoom installation file
+;
+
+; No languages - English by default
+;
+#{"CDoom with Launcher"},(0x101F3D67),1,0,0,TYPE=SISAPP
+
+"\CDoom\install.epoc.txt"-"", FT
+
+; Doom files
+"\epoc32\release\armi\urel\cdoom.exe"-"!:\CDoom\CDoom.exe"
+"\CDoom\install.epoc.txt"-"!:\CDoom\install.epoc.txt"
+"\CDoom\copying.epoc.txt"-"!:\CDoom\copying.epoc.txt"
+"\CDoom\readme.sdl"-"!:\CDoom\readme.sdl"
+"\CDoom\readme-sdl.txt"-"!:\CDoom\readme-sdl.txt"
+
+; Laucher files
+"\epoc32\release\armi\urel\launcher.app"-"!:\System\apps\launcher\launcher.app"
+"\epoc32\release\armi\urel\launcher.r01"-"!:\System\apps\launcher\launcher.rsc"
+"\epoc32\release\armi\urel\launcher.aif"-"!:\System\apps\launcher\launcher.aif"
+"\epoc32\release\armi\urel\launcher.mbm"-"!:\System\apps\launcher\launcher.mbm"
+"\epoc32\release\armi\urel\launcher.txt"-"!:\System\apps\launcher\launcher.txt"
+"\launcher\readme.sis.txt"-              "!:\System\apps\launcher\readme.sis.txt"
